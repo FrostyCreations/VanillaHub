@@ -15,9 +15,9 @@ export const proposalData = {
     "contactEmail": "hello@bigondigital.com"
   },
   hero: {
-    "badge": "VanillaHub",
-    "title": "Cloud Payroll & HR Strategy Proposal",
-    "subtitle": "Streamlined payroll solutions for modern businesses.",
+    "badge": "VanillaHub AI",
+    "title": "Helping you get the boring stuff right.",
+    "subtitle": "Revolutionising South African payroll with automated intelligence and cloud-based compliance.",
     "heroVideoUrl": "/aerial-view-of-boat-near-beach-mozambique-2026-01-23-00-24-55-utc.mp4"
   },
   sections: [
@@ -26,7 +26,7 @@ export const proposalData = {
       id: 'intro',
       data: {
         title: "Introduction",
-        content: "VanillaHub is a next-generation cloud payroll and HR solution designed to revolutionise how businesses manage their workforce. \n\nBuilding on the success of Vanilla Payroll, VanillaHub offers a modern, intuitive, and highly scalable platform tailored for the South African market.\n\nThe objective of this proposal is to establish the digital infrastructure and marketing strategy required to drive adoption, simplify payroll for our clients, and build a community of 'Vanilla Ambassadors'.",
+        content: "VanillaHub is a next-generation cloud payroll and HR solution designed to simplify complex South African tax and labour laws. \n\nBy automating the 'boring stuff'—from SARS compliance (BCEA, COIDA, UIF) to smart HR tracking—we empower businesses to focus on what truly matters: growth and people.\n\nThe objective of this proposal is to scale the VanillaHub brand, optimize the marketing infrastructure for the Free Pay Wizard and Salary Planner, and build a robust community of 'Vanilla Ambassadors'.",
         image1: "/Mozambique/beautiful-sunset-on-the-beach-in-watamu-blue-bay-2026-01-09-14-26-51-utc.webp",
         image2: "/Mozambique/crystal-clear-emerald-ocean-water-2026-01-13-18-42-34-utc.webp"
       }
