@@ -58,9 +58,10 @@ function App({ hideEditButton }) {
 
   const navLinks = [
     { name: 'Introduction', href: '#intro' },
-    { name: 'Strategy', href: '#strategy' },
     { name: 'Phase 1', href: '#phase1-header' },
-    { name: 'Phase 2', href: '#phase2' }
+    { name: 'Phase 2', href: '#phase2-header' },
+    { name: 'Phase 3', href: '#phase3-header' },
+    { name: 'Phase 4', href: '#phase4-header' }
   ]
 
   return (
@@ -77,9 +78,9 @@ function App({ hideEditButton }) {
                   width: '40px', height: '40px', borderRadius: '50%', border: '2px solid var(--accent-primary)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', color: 'var(--accent-primary)', fontSize: '14px'
                 }}>
-                  {proposalData.client.logoText || 'P&G'}
+                  {proposalData.client.logoText || 'VH'}
                 </div>
-                <span style={{color: 'var(--text-primary)'}}>Tours</span>
+                <span style={{color: 'var(--text-primary)'}}>Hub</span>
               </>
             )}
           </a>
@@ -176,11 +177,11 @@ function App({ hideEditButton }) {
             fontWeight: 700,
             fontSize: '0.9rem',
             textDecoration: 'none',
-            boxShadow: '0 4px 20px rgba(196,154,69,0.4)',
+            boxShadow: '0 4px 20px rgba(255, 0, 0, 0.4)',
             transition: 'transform 0.2s, box-shadow 0.2s',
           }}
-          onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 8px 30px rgba(196,154,69,0.5)'; }}
-          onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = '0 4px 20px rgba(196,154,69,0.4)'; }}
+          onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 8px 30px rgba(255, 0, 0, 0.5)'; }}
+          onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = '0 4px 20px rgba(255, 0, 0, 0.4)'; }}
         >
           <Pencil size={16} /> Edit Proposal
         </Link>

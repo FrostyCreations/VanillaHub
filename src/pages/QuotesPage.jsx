@@ -55,7 +55,7 @@ const QuotesPage = () => {
 
   const handleApprove = () => {
     const recipient = "francois.bigondigital@gmail.com";
-    const subject = `Proposal Approved: ${proposalData.client?.name || 'PNG Tours'}`;
+    const subject = `Proposal Approved: ${proposalData.client?.name || 'VanillaHub'}`;
     const approvalText = getApprovalText();
     
     // Attempt automatic clipboard copy
@@ -82,7 +82,7 @@ const QuotesPage = () => {
 
   const openGmail = () => {
     const recipient = "francois.bigondigital@gmail.com";
-    const subject = `Proposal Approved: ${proposalData.client?.name || 'PNG Tours'}`;
+    const subject = `Proposal Approved: ${proposalData.client?.name || 'VanillaHub'}`;
     const approvalText = getApprovalText();
     const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(approvalText)}`;
     window.open(gmailUrl, '_blank');
@@ -143,7 +143,7 @@ const QuotesPage = () => {
           </Link>
           <div className="header-content">
             <h1 className="quotes-title">Investment Summary</h1>
-            <p className="quotes-subtitle">Review quotes and approve the project plan for {proposalData.client?.name || 'PNG Tours'}.</p>
+            <p className="quotes-subtitle">Review quotes and approve the project plan for {proposalData.client?.name || 'VanillaHub'}.</p>
           </div>
         </div>
       </div>

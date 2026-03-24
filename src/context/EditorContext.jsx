@@ -33,15 +33,19 @@ export function EditorProvider({ children }) {
   // Merge derived state
   const sectionOrder = overrides.sectionOrder || baseData.sections.map(s => s.id);
   
-  const sections = sectionOrder.map(id => {
-    const baseSection = baseData.sections.find(s => s.id === id);
-    const sectionOverrides = (overrides.sections || {})[id] || {};
-    
-    return {
-      ...baseSection,
-      data: deepMerge(baseSection?.data, sectionOverrides.data || {}),
-    };
-  });
+  const sections = sectionOrder
+    .map(id => {
+      const baseSection = baseData.sections.find(s => s.id === id);
+      if (!baseSection) return null;
+      
+      const sectionOverrides = (overrides.sections || {})[id] || {};
+      
+      return {
+        ...baseSection,
+        data: deepMerge(baseSection.data, sectionOverrides.data || {}),
+      };
+    })
+    .filter(Boolean);
 
   const data = {
     ...baseData,
