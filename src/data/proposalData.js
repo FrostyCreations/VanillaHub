@@ -18,7 +18,7 @@ export const proposalData = {
     "badge": "VanillaHub AI",
     "title": "Helping you get the boring stuff right.",
     "subtitle": "Revolutionising South African payroll with automated intelligence and cloud-based compliance.",
-    "heroVideoUrl": "/aerial-view-of-boat-near-beach-mozambique-2026-01-23-00-24-55-utc.mp4"
+    "heroImageUrl": "/vanilla-robot.png"
   },
   sections: [
     {

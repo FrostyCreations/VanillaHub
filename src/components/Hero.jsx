@@ -8,16 +8,25 @@ const Hero = ({ data }) => {
     <section id="home" className="hero-section">
       {/* Background Elements */}
       <div className="glow-orb orb-1">
-        <video 
-          className="hero-video" 
-          autoPlay 
-          loop 
-          muted 
-          playsInline
-          poster="/Mozambique/aerial-view-of-the-sailboat-on-blue-sea-empty-whi-2026-03-16-00-58-36-utc.webp"
-        >
-          <source src={data.heroVideoUrl || "https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-tropical-beach-140-large.mp4"} type="video/mp4" />
-        </video>
+        {data.heroVideoUrl ? (
+          <video 
+            className="hero-video" 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            poster={data.heroImageUrl}
+          >
+            <source src={data.heroVideoUrl} type="video/mp4" />
+          </video>
+        ) : (
+          <img 
+            src={data.heroImageUrl || "/vanilla-robot.png"} 
+            alt="Hero" 
+            className="hero-video" 
+            style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+          />
+        )}
       </div>
       
       <div className="hero-container container">
