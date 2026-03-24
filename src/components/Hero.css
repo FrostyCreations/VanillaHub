@@ -1,0 +1,115 @@
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: var(--nav-height);
+  overflow: visible;
+  background-color: var(--bg-color);
+}
+
+/* Big blue circle accent representing the slide graphic on the right */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.orb-1 {
+  width: 1200px;
+  height: 1200px;
+  background-color: var(--accent-primary);
+  top: -20%;
+  right: -30%;
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.05),
+    0 40px 100px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+}
+
+.orb-2 {
+  display: none; /* Removed the secondary orb for cleaner look */
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(50px, 50px) scale(1.1); }
+}
+
+.hero-container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 600px;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  background: var(--accent-glow);
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  color: var(--text-primary);
+  max-width: 550px;
+  line-height: 1.6;
+  font-weight: 700;
+  margin-top: 40px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.ml-2 {
+  margin-left: 8px;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 80vh;
+    padding-top: 100px;
+    background-color: #ffffff !important; /* Keep white background fix */
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .hero-actions a {
+    width: 100%;
+  }
+}
