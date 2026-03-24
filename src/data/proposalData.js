@@ -27,8 +27,8 @@ export const proposalData = {
       data: {
         title: "Introduction",
         content: "VanillaHub is a next-generation cloud payroll and HR solution designed to simplify complex South African tax and labour laws. \n\nBy automating the 'boring stuff'—from SARS compliance (BCEA, COIDA, UIF) to smart HR tracking—we empower businesses to focus on what truly matters: growth and people.\n\nThe objective of this proposal is to scale the VanillaHub brand, optimize the marketing infrastructure for the Free Pay Wizard and Salary Planner, and build a robust community of 'Vanilla Ambassadors'.",
-        image1: "/Mozambique/beautiful-sunset-on-the-beach-in-watamu-blue-bay-2026-01-09-14-26-51-utc.webp",
-        image2: "/Mozambique/crystal-clear-emerald-ocean-water-2026-01-13-18-42-34-utc.webp"
+        image1: "/tech-nodes.png",
+        image2: "/vanilla-robot.png"
       }
     },
     {
@@ -59,7 +59,7 @@ export const proposalData = {
         title: "Brand Launch & Digital Foundations",
         description: "This phase focuses on establishing the brand and generating enquiries.\n\n We will build the identity, website, content structure and marketing channels required to begin generating robust leads.",
         imagePosition: "left",
-        imageUrl: "/Mozambique/aerial-view-of-the-sailboat-on-blue-sea-empty-whi-2026-03-16-00-58-36-utc.webp"
+        imageUrl: "/vanilla-robot.png"
       }
     },
     {
@@ -86,7 +86,7 @@ export const proposalData = {
         quoteUrl: "https://zohosecurepay.com/books/bigondigital/secure?CEstimateID=2-34bc0b1ac6b266944fa5436b8993ac6bb00e1a47c056f15eb9974ae3f47bffd8e8ef9ccdc04dccdbf0fc5ac66f7360f79265d3a24d2171e4fbccc4d131aa593211e80a707f5b3196",
         description: "Professional brand materials help position PNG Tours as a credible and well-established travel provider. \n\nThis includes items such as logo redevelopment,quotes, invoices and business cards, ensuring the business presents itself professionally when communicating with travellers and partners.",
         imagePosition: "left",
-        imageUrl: "/Mozambique/front-view-of-a-group-of-multi-ethnic-friends-walk-2026-01-09-09-46-11-utc.webp"
+        imageUrl: "/tech-nodes.png"
       }
     },
     {
@@ -112,7 +112,7 @@ export const proposalData = {
         quoteUrl: "https://zohosecurepay.com/books/bigondigital/secure?CEstimateID=2-34bc0b1ac6b266944fa5436b8993ac6b35d3e85a3a5d0ceb6f0b1a8156bcabc73fdf735ab7301e8af0fc5ac66f7360f79265d3a24d2171e4fbccc4d131aa593211e80a707f5b3196",
         description: "Clear and well-structured travel packages are essential for successful tour marketing. \n\nPackages will be designed to clearly communicate the experience, itinerary, inclusions and value of each trip, making them easy for potential travellers to understand and book. \n\nThese packages will also be designed into digital brochures and marketing materials that can be shared across marketing channels.",
         imagePosition: "left",
-        imageUrl: "/Mozambique/crystal-clear-emerald-ocean-water-2026-01-13-18-42-34-utc.webp"
+        imageUrl: "/vanilla-robot.png"
       }
     },
     {
@@ -151,7 +151,7 @@ export const proposalData = {
         quoteUrl: "https://zohosecurepay.com/books/bigondigital/secure?CEstimateID=2-34bc0b1ac6b266944fa5436b8993ac6b61e98fd53cc4aee25d4a7019f03dbfba1a8c66c7bcca8961f0fc5ac66f7360f79265d3a24d2171e4fbccc4d131aa593211e80a707f5b3196",
         description: "Social media is one of the most influential discovery channels in travel. \n\nExisting platforms will be refined and aligned with the new brand positioning so that profiles, imagery and messaging clearly communicate the PNG Tours experience. \n\nThese channels will serve as an ongoing platform to showcase the lodge, destinations and travel experiences.",
         imagePosition: "right",
-        imageUrl: "/Mozambique/front-view-of-a-group-of-multi-ethnic-friends-walk-2026-01-09-09-46-11-utc.webp"
+        imageUrl: "/tech-nodes.png"
       }
     },
     {
@@ -164,7 +164,7 @@ export const proposalData = {
         quoteUrl: "https://zohosecurepay.com/books/bigondigital/secure?CEstimateID=2-34bc0b1ac6b266944fa5436b8993ac6ba499f9a9769d257e749c58ea6396683335b34a156e2804f8f0fc5ac66f7360f79265d3a24d2171e4fbccc4d131aa593211e80a707f5b3196",
         description: "Consistency is essential when building a new travel brand.\n\n A structured content calendar will guide the creation and scheduling of posts, ensuring the brand maintains an active presence online while highlighting the lodge experience and travel packages.",
         imagePosition: "left",
-        imageUrl: "/Mozambique/kids-running-at-the-beach-2026-01-09-12-26-55-utc.webp"
+        imageUrl: "/tech-nodes.png"
       }
     },
     {
@@ -191,7 +191,7 @@ export const proposalData = {
         description: "Effective social media requires more than posting content. \n\nEach platform will be optimised to ensure profiles, messaging and visuals align with the PNG Tours brand while supporting marketing campaigns. \n\nOngoing management will focus on community engagement, responding to enquiries, monitoring performance and refining content per platform to ensure the brand remains active, visible and responsive to potential travellers.\n\n*Note: The price for Social Media Content Creation and Social Media Management is combined into a single quote.*",
         imagePosition: "left",
         bgColor: "secondary",
-        imageUrl: "/Mozambique/laughing-at-piggyback-having-fun-at-beach-2026-01-05-05-24-21-utc.webp"
+        imageUrl: "/vanilla-robot.png"
       }
     },
     {
