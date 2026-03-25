@@ -88,7 +88,7 @@ export const proposalData = {
         title: "Search Visibility",
         description: "We establish the foundations for search visibility, ensuring Vanilla Hub can be discovered by businesses actively seeking payroll, HR, and financial solutions. As Knack has limitations from an SEO perspective, this phase includes structuring a WordPress layer or integration to support SEO efforts. This enables scalable content, improved indexing, and long-term organic growth aligned to your business goals.",
         imagePosition: "left",
-        imageUrl: "/vanilla-robot.png",
+        imageUrl: "/SEO Optimzation.png",
         price: "R 8,500",
         quoteLabel: "SEO Foundations Set-up"
       }
