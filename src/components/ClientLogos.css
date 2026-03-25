@@ -1,0 +1,135 @@
+.client-logos-section {
+  padding: 80px 0;
+  background-color: var(--bg-color); /* Matches the dark background above Next Steps */
+  overflow: hidden;
+  position: relative;
+}
+
+.client-logos-title {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.logo-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Fade mask for smooth entry/exit at the edges */
+.logo-slider::before,
+.logo-slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 15vw;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.logo-slider::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-color) 0%, transparent 100%);
+}
+
+.logo-slider::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-color) 0%, transparent 100%);
+}
+
+.logo-track {
+  display: flex;
+  align-items: center;
+  gap: 80px; /* Space between logos */
+  width: max-content;
+  animation: scroll-logos 40s linear infinite;
+}
+
+/* Pause scroll when hovering over the track */
+.logo-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-logos {
+  0% { transform: translateX(0); }
+  /* Shift exactly 50% left to loop perfectly with duplicated array */
+  100% { transform: translateX(calc(-50% - 40px)); } 
+}
+
+.client-logo-link {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  min-width: 160px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: grayscale(100%) opacity(0.5); /* Dimmed and gray initially */
+  text-decoration: none;
+}
+
+.client-logo-link:hover {
+  filter: grayscale(0%) opacity(1); /* Full color on hover */
+  transform: scale(1.1);
+}
+
+.client-logo-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Custom Tooltip showing the website URL */
+.logo-tooltip {
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: var(--accent-primary);
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  pointer-events: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  z-index: 10;
+}
+
+/* Tooltip tail pointer */
+.logo-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -6px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: var(--accent-primary) transparent transparent transparent;
+}
+
+.client-logo-link:hover .logo-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0); /* Pop-up effect */
+}
+
+@media (max-width: 768px) {
+  .logo-track {
+    gap: 40px;
+  }
+  .client-logo-link {
+    height: 60px;
+    min-width: 120px;
+  }
+}

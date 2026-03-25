@@ -17,6 +17,7 @@ import NewsletterStrategy from './components/NewsletterStrategy'
 import FinalCTA from './components/FinalCTA'
 import FeatureSection from './components/FeatureSection'
 import AboutCompany from './components/AboutCompany'
+import ClientLogos from './components/ClientLogos'
 import Footer from './components/Footer'
 import './index.css'
 
@@ -33,7 +34,8 @@ const ComponentMap = {
   NewsletterStrategy,
   FinalCTA,
   FeatureSection,
-  AboutCompany
+  AboutCompany,
+  ClientLogos
 };
 
 function App({ hideEditButton }) {

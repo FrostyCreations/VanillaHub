@@ -293,6 +293,21 @@ export const proposalData = {
       }
     },
     {
+      type: 'ClientLogos',
+      id: 'clients',
+      data: {
+        title: "Trusted By Industry Leaders",
+        logos: [
+          { name: "Client Partner 1", url: "https://via.placeholder.com/200x80?text=Client+Logo", website: "https://example.com" },
+          { name: "Client Partner 2", url: "https://via.placeholder.com/200x80?text=Client+Logo", website: "https://example.com" },
+          { name: "Client Partner 3", url: "https://via.placeholder.com/200x80?text=Client+Logo", website: "https://example.com" },
+          { name: "Client Partner 4", url: "https://via.placeholder.com/200x80?text=Client+Logo", website: "https://example.com" },
+          { name: "Client Partner 5", url: "https://via.placeholder.com/200x80?text=Client+Logo", website: "https://example.com" },
+          { name: "Client Partner 6", url: "https://via.placeholder.com/200x80?text=Client+Logo", website: "https://example.com" }
+        ]
+      }
+    },
+    {
       type: 'FinalCTA',
       id: 'nextsteps',
       data: {
