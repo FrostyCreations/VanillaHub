@@ -1,148 +1,173 @@
 .hero-section.card-layout {
-  padding: 120px 0 60px;
-  background-color: var(--bg-color);
+  padding: 80px 0 40px;
+  background-color: #ffffff; /* Page background is white */
   min-height: auto;
 }
 
 .hero-main-card {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  max-width: 1400px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 7;
   min-height: 500px;
   border-radius: 40px;
-  overflow: hidden;
-  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.4);
+  /* NO overflow: hidden here so robot can overlap */
 }
 
 .hero-card-background {
   position: absolute;
   inset: 0;
   z-index: 1;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.2);
 }
 
 .hero-card-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: scale(1.02); /* Slight scale to hide edges */
 }
 
+/* Base Gradient Overlay */
 .hero-card-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 30% 50%, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.9) 100%);
+  background: linear-gradient(to right, rgba(20, 15, 20, 0.8) 0%, rgba(20, 15, 20, 0.3) 60%, transparent 100%);
   z-index: 2;
 }
 
-.hero-robot-container {
+/* Wavy Accent at the absolute bottom of the BG card */
+.hero-wave-container {
   position: absolute;
-  right: 5%;
   bottom: 0;
-  width: 50%;
-  height: 110%; /* Makes it pop out a bit */
-  z-index: 5;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  pointer-events: none;
+  left: 0;
+  width: 100%;
+  line-height: 0; /* Ensures no gap below SVG */
+  z-index: 3; /* Above overlay, beneath text/robot */
 }
 
-.floating-robot {
-  height: 100%;
-  width: auto;
-  object-fit: contain;
-  mix-blend-mode: screen; /* Effectively removes black background */
-  filter: drop-shadow(0 0 30px rgba(122, 243, 226, 0.3));
+.hero-wave-svg {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .hero-card-content {
-  position: relative;
+  position: absolute; /* Changed to absolute to float over bg */
+  top: 0;
+  left: 0;
   z-index: 10;
-  padding: 80px;
+  padding: 8% 6%;
+  width: 60%;
   height: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 6vw, 6rem);
-  font-weight: 900;
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 800;
   color: #fff;
-  max-width: 800px;
-  line-height: 1;
-  text-transform: capitalize;
+  line-height: 1.1;
+  text-transform: none; /* Reset from capitalize */
+}
+
+/* Overlapping Robot Container */
+.hero-robot-container {
+  position: absolute;
+  right: 2%;
+  bottom: -40px; /* Overlaps bottom of card */
+  width: 45%;
+  height: 120%; /* Extends above card slightly */
+  z-index: 12; /* Above everything */
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  pointer-events: none; /* Let clicks pass through */
+}
+
+.hero-robot-img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(-10px 10px 20px rgba(0,0,0,0.3));
 }
 
 /* Floating Widgets */
 .hero-widget {
   position: absolute;
-  z-index: 15;
-  background: rgba(26, 26, 26, 0.8);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  padding: 20px;
+  z-index: 11;
+  background: rgba(40, 40, 45, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 16px 20px;
   color: #fff;
   transition: transform 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 .hero-widget:hover {
-  transform: scale(1.05);
-  border-color: var(--accent-primary);
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .widget-leads {
-  top: 20%;
-  right: 15%;
-  width: 200px;
+  top: 30%;
+  right: 50%; /* Positioned left of the robot */
+  width: 260px;
 }
 
 .widget-conversion {
-  top: 10%;
-  right: 5%;
-  width: 180px;
+  top: 15%;
+  right: 8%; /* Top right above robot */
+  width: 220px;
 }
 
 .widget-header {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.8rem;
-  font-weight: 500;
+  font-size: 0.85rem;
+  font-weight: 600;
   margin-bottom: 12px;
-  color: #aaa;
+  color: #eaeaea;
 }
 
-.dot { width: 8px; height: 8px; border-radius: 50%; }
-.dot.turquoise { background: var(--accent-primary); }
-
-.widget-value {
-  font-size: 2rem;
-  font-weight: 800;
+.widget-svg-chart {
+  width: 100%;
+  height: 60px;
 }
 
 /* Quote Section */
 .hero-quote-section {
-  margin-top: 60px;
+  margin-top: 60px; /* Space for the overlapping robot */
   padding: 0 40px;
-  max-width: 1000px;
+  max-width: 800px;
 }
 
 .hero-quote {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   line-height: 1.6;
-  color: var(--text-secondary);
-  margin-bottom: 16px;
+  color: #333; /* Dark text on white background */
+  margin-bottom: 8px;
 }
 
 .hero-quote strong {
-  color: var(--text-primary);
+  color: #000;
+  font-weight: 700;
 }
 
 .quote-author {
   font-weight: 700;
   color: var(--accent-primary);
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  text-transform: none;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 1024px) {
@@ -151,7 +176,14 @@
     min-height: 400px;
   }
   .hero-card-content {
-    padding: 40px;
+    width: 80%;
+    padding: 10% 8%;
+  }
+  .hero-robot-container {
+    opacity: 0.2; /* Fade robot on smaller screens */
+    right: 0;
+    width: 100%;
+    bottom: 0;
   }
   .hero-widget {
     display: none;
