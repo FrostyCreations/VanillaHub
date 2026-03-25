@@ -8,7 +8,7 @@ export const proposalData = {
   client: {
     "name": "VanillaHub",
     "logoText": "VH",
-    "logoUrl": "vanilla-hub-logo.png"
+    "logoUrl": "/Vanilla hub logo.png"
   },
   agency: {
     "name": "Big On Digital",
