@@ -72,7 +72,7 @@ export const proposalData = {
         title: "Audit & Recommendations",
         description: "We conduct a comprehensive website audit to identify gaps in structure, messaging, user experience, and conversion pathways. The outcome is a clear set of recommendations to improve performance and lead generation. This audit will be handed over for implementation within the Knack environment, or we can provide a separate quotation to assist with enhancements directly within the platform.",
         imagePosition: "right",
-        imageUrl: "/tech-nodes.png"
+        imageUrl: "/Vanilla hub Enhanced.png"
       }
     },
     {
