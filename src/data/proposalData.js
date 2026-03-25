@@ -284,7 +284,7 @@ export const proposalData = {
       id: 'about',
       data: {
         title: "About Big On Digital",
-        description: "<p>Big On Digital is a performance-driven marketing agency specializing in scaling tech and SaaS businesses across Southern Africa. Our mission is to bridge the gap between complex technology and the people who use it.</p><p>With a focus on data-driven growth, we build the foundations, expand your reach, and automate your customer journeys to ensure long-term success.</p>",
+        description: "<p>Big On Digital is a boutique digital marketing agency offering expert, end-to-end marketing services to both small businesses and large corporations. With over two decades of combined industry experience, our team specialises in social media, branding, web development, and digital strategy that help clients grow their reach and strengthen their brand presence.</p><p>We believe in the power of creativity, strategy, and innovation to transform businesses. Every project is approached with purpose and precision, combining design, technology, and storytelling to deliver meaningful results.</p><p>Our team brings a dynamic mix of talent and insight, ensuring each brand we work with receives customised, high-impact digital solutions that drive measurable success.</p><p>At Big On Digital, we don’t just build brands, we bring visions to life.</p>",
         team: [
           { name: "Digital Specialist", role: "Growth & Strategy", image: "/staff1.png" },
           { name: "Creative Director", role: "Design & UX", image: "/staff2.png" },
