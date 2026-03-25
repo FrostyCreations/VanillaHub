@@ -50,7 +50,7 @@ export const proposalData = {
         title: "Creator Archetype",
         description: "We define Vanilla Hub’s brand through the lens of the Creator archetype, positioning the business as an innovator that builds intelligent, practical solutions for modern businesses. This establishes a clear visual identity, tone, and messaging framework that reflects your tech-driven approach. The outcome is a brand that feels purposeful, distinctive, and aligned to your vision of creating smarter systems for SMEs across Southern Africa.",
         imagePosition: "right",
-        imageUrl: "/tech-nodes.png"
+        imageUrl: "/Brand Archetype Wheel.png"
       }
     },
     {
@@ -303,7 +303,9 @@ export const proposalData = {
           { name: "Client Partner 3", url: "https://via.placeholder.com/200x80?text=Client+Logo", website: "https://example.com" },
           { name: "Client Partner 4", url: "https://via.placeholder.com/200x80?text=Client+Logo", website: "https://example.com" },
           { name: "Client Partner 5", url: "https://via.placeholder.com/200x80?text=Client+Logo", website: "https://example.com" },
-          { name: "Client Partner 6", url: "https://via.placeholder.com/200x80?text=Client+Logo", website: "https://example.com" }
+          { name: "Client Partner 6", url: "https://via.placeholder.com/200x80?text=Client+Logo", website: "https://example.com" },
+          { name: "Client Partner 7", url: "https://via.placeholder.com/200x80?text=Client+Logo", website: "https://example.com" },
+          { name: "Client Partner 8", url: "https://via.placeholder.com/200x80?text=Client+Logo", website: "https://example.com" }
         ]
       }
     },
