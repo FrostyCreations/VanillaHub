@@ -124,7 +124,7 @@ const ClientLogos = ({ data }) => {
                   <img 
                     src={client.url} 
                     alt={client.name} 
-                    className={`client-logo-img ${client.name === "WorkPods" ? "invert-white" : ""}`} 
+                    className="client-logo-img" 
                     draggable="false" 
                   />
                 </a>
