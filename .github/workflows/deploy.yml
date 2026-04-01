@@ -31,6 +31,6 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./dist/
-        server-dir: ./Vanillahub.bigondigital.online2/
+        server-dir: ./public_html/
         # Optional: set to true to delete files on the server that are not in the local dist folder
         delete-removed: true
