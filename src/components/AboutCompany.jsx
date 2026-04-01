@@ -33,7 +33,9 @@ const AboutCompany = ({ data }) => {
                 </div>
                 <div className="member-info">
                   <h3 className="member-name">{member.name}</h3>
-                  <p className="member-role">{member.role}</p>
+                  <p className="member-title">{member.title}</p>
+                  <p className="member-subtitle">{member.subtitle}</p>
+                  <p className="member-desc">{member.description}</p>
                 </div>
               </div>
             ))}

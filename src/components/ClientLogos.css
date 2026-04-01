@@ -15,15 +15,13 @@
   letter-spacing: 2px;
 }
 
-.logo-slider {
-  width: 100%;
-  overflow: hidden;
+/* Move fade masks to the new wrapper so they don't scroll with the container */
+.logo-mask {
   position: relative;
+  width: 100%;
 }
-
-/* Fade mask for smooth entry/exit at the edges */
-.logo-slider::before,
-.logo-slider::after {
+.logo-mask::before,
+.logo-mask::after {
   content: "";
   position: absolute;
   top: 0;
@@ -32,34 +30,44 @@
   z-index: 2;
   pointer-events: none;
 }
-
-.logo-slider::before {
+.logo-mask::before {
   left: 0;
   background: linear-gradient(to right, var(--bg-color) 0%, transparent 100%);
 }
-
-.logo-slider::after {
+.logo-mask::after {
   right: 0;
   background: linear-gradient(to left, var(--bg-color) 0%, transparent 100%);
+}
+
+.logo-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  /* Add padding to prevent the scaled hover state from being cut off */
+  padding: 20px 0;
+}
+
+.logo-slider.draggable {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-behavior: auto; /* JS dragging support */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  cursor: grab;
+}
+.logo-slider.draggable::-webkit-scrollbar {
+  display: none;
+}
+.logo-slider.draggable.active {
+  cursor: grabbing;
 }
 
 .logo-track {
   display: flex;
   align-items: center;
-  gap: 80px; /* Space between logos */
+  gap: 40px; /* Space between logos */
   width: max-content;
-  animation: scroll-logos 40s linear infinite;
-}
-
-/* Pause scroll when hovering over the track */
-.logo-track:hover {
-  animation-play-state: paused;
-}
-
-@keyframes scroll-logos {
-  0% { transform: translateX(0); }
-  /* Shift exactly 50% left to loop perfectly with duplicated array */
-  100% { transform: translateX(calc(-50% - 40px)); } 
 }
 
 .client-logo-link {
@@ -126,7 +134,7 @@
 
 @media (max-width: 768px) {
   .logo-track {
-    gap: 40px;
+    gap: 20px;
   }
   .client-logo-link {
     height: 60px;

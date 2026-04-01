@@ -92,39 +92,33 @@ const Hero = ({ data }) => {
             </motion.div>
           </div>
 
-          {/* Floating Widgets */}
-          <motion.div 
-            className="hero-widget widget-leads"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-          >
-            <div className="widget-header">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path><path d="M12 7v5l3 3"></path></svg>
-              <span>Spacewalks</span>
-            </div>
-            <svg className="widget-svg-chart" viewBox="0 0 200 60" preserveAspectRatio="none">
-              <path d="M0 50 Q 25 45, 50 35 T 100 40 T 150 20 T 200 10" fill="none" stroke="#FFAA00" strokeWidth="3" />
-              <path d="M0 50 Q 25 45, 50 35 T 100 40 T 150 20 T 200 10 V 60 H 0 Z" fill="rgba(255, 170, 0, 0.2)" />
-              <circle cx="150" cy="20" r="4" fill="#fff" />
-            </svg>
-          </motion.div>
 
-          <motion.div 
-            className="hero-widget widget-conversion"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.7, duration: 0.8 }}
-          >
-            <div className="widget-header">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-              <span>Heart rate</span>
-            </div>
-            <svg className="widget-svg-chart" viewBox="0 0 180 60" preserveAspectRatio="none">
-              <path d="M0 30 H 40 L 50 10 L 70 50 L 80 20 L 90 30 H 130 Q 140 25, 150 30 T 180 30" fill="none" stroke="#FFAA00" strokeWidth="2" />
-            </svg>
-          </motion.div>
         </div>
+
+        <motion.div 
+          className="hero-powered-by"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.8 }}
+          style={{
+            textAlign: 'center',
+            marginTop: '2rem',
+            padding: '1.5rem',
+            borderRadius: '16px',
+            background: 'linear-gradient(90deg, rgba(255, 170, 0, 0.05) 0%, rgba(255, 170, 0, 0.1) 50%, rgba(255, 170, 0, 0.05) 100%)',
+            border: '1px solid rgba(255, 170, 0, 0.2)'
+          }}
+        >
+          <p style={{
+            margin: 0,
+            fontSize: '1.25rem',
+            color: '#ffffff',
+            fontWeight: '400',
+            letterSpacing: '0.5px'
+          }}>
+            Powered by <strong style={{ color: '#FFAA00' }}>Intelligent automation</strong> and <strong style={{ color: '#FFAA00' }}>practical business insight</strong>.
+          </p>
+        </motion.div>
 
         {/* Quote Section */}
         <motion.div 
@@ -134,7 +128,7 @@ const Hero = ({ data }) => {
           transition={{ delay: 1, duration: 0.8 }}
         >
           <p className="hero-quote">
-            "You want to wake up in the morning and think the future is going to be great - and that's what building <strong>intelligent systems</strong> is all about. It's about believing in the future and thinking that the future will be better than the past."
+            "Business should not be complicated. The right systems make it simple, efficient and built to grow."
           </p>
           <span className="quote-author">— VanillaHub AI</span>
         </motion.div>

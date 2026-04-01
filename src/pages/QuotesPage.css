@@ -1,14 +1,14 @@
 .quotes-page {
   min-height: 100vh;
-  background: #faf9f6;
-  color: #2c2c2c;
+  background: var(--bg-color);
+  color: var(--text-primary);
   padding-bottom: 80px;
 }
 
 .quotes-header {
-  background: white;
+  background: transparent;
   padding: 40px 0 60px;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid var(--border-color);
   margin-bottom: -40px;
 }
 
@@ -16,7 +16,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #666;
+  color: var(--text-secondary);
   text-decoration: none;
   font-weight: 500;
   margin-bottom: 24px;
@@ -36,11 +36,15 @@
   font-weight: 800;
   margin-bottom: 12px;
   color: var(--accent-primary);
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .quotes-subtitle {
   font-size: 1.25rem;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .quotes-container {
@@ -56,10 +60,13 @@
 }
 
 .quotes-list-card {
-  background: white;
+  background: rgba(30,30,30,0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-color);
   border-radius: 24px;
   padding: 40px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
 }
 
 .quotes-table {
@@ -70,22 +77,34 @@
 .quotes-table th {
   text-align: left;
   padding: 16px;
-  border-bottom: 2px solid #f0f0f0;
+  border-bottom: 2px solid var(--border-color);
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #999;
+  color: var(--text-muted);
 }
 
 .quotes-table td {
   padding: 24px 16px;
-  border-bottom: 1px solid #f5f5f5;
+  border-bottom: 1px solid var(--border-color);
   transition: opacity 0.3s, background 0.3s;
 }
 
+.quotes-table tr.phase-header-row td {
+  background: rgba(122, 243, 226, 0.08); /* Faint cyan glow */
+  font-weight: 800;
+  color: var(--accent-primary);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  padding: 12px 16px;
+  border-bottom: 2px solid var(--border-color);
+  pointer-events: none;
+}
+
 .quotes-table tr.deselected td {
-  opacity: 0.5;
-  background: #fafafa;
+  opacity: 0.2;
+  background: transparent;
 }
 
 /* Custom Checkbox */
@@ -93,7 +112,6 @@
   display: block;
   position: relative;
   padding-left: 35px;
-  margin-bottom: 12px;
   cursor: pointer;
   font-size: 22px;
   user-select: none;
@@ -113,19 +131,20 @@
   left: 0;
   height: 24px;
   width: 24px;
-  background-color: #eee;
+  background-color: var(--bg-tertiary);
   border-radius: 6px;
-  border: 2px solid #ddd;
+  border: 1px solid var(--border-color);
   transition: all 0.2s;
 }
 
 .custom-checkbox:hover input ~ .checkmark {
-  background-color: #ccc;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 10px var(--accent-glow);
 }
 
 .custom-checkbox input:checked ~ .checkmark {
-  background-color: var(--accent-gold, #c4a47c);
-  border-color: var(--accent-gold, #c4a47c);
+  background-color: var(--accent-primary);
+  border-color: var(--accent-primary);
 }
 
 .checkmark:after {
@@ -143,7 +162,7 @@
   top: 4px;
   width: 5px;
   height: 10px;
-  border: solid white;
+  border: solid var(--bg-color);
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
@@ -157,13 +176,14 @@
 .section-name {
   font-size: 1.15rem;
   font-weight: 600;
+  color: var(--text-primary);
 }
 
 .billing-tag {
   display: inline-block;
   font-size: 0.75rem;
-  background: #eef2ff;
-  color: #4f46e5;
+  background: rgba(122, 243, 226, 0.1);
+  color: var(--accent-primary);
   padding: 2px 8px;
   border-radius: 4px;
   font-weight: 700;
@@ -213,14 +233,25 @@
 }
 
 .view-details-link {
-  color: #007aff;
+  display: inline-block;
+  white-space: nowrap;
+  color: var(--accent-primary);
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
+  padding: 8px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: all 0.2s;
+  text-align: center;
+  min-width: 110px;
 }
 
 .view-details-link:hover {
-  text-decoration: underline;
+  background: var(--accent-primary);
+  color: var(--bg-color);
+  box-shadow: 0 0 15px var(--accent-glow);
+  transform: translateY(-1px);
 }
 
 .summary-card {
@@ -232,8 +263,10 @@
 }
 
 .summary-card.dark {
-  background: #111;
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid var(--border-color);
   color: white;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
 .summary-card h3 {
@@ -259,12 +292,12 @@
 
 .summary-row.total {
   font-size: 1.25rem;
-  color: var(--accent-gold, #c4a47c);
+  color: var(--accent-primary);
 }
 
 .btn-approve-all {
-  background: var(--accent-gold, #c4a47c);
-  color: white;
+  background: var(--accent-primary);
+  color: var(--bg-color);
   border: none;
   padding: 18px;
   border-radius: 12px;
@@ -274,18 +307,20 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: transform 0.2s, background 0.2s;
+  transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 20px rgba(122, 243, 226, 0.2);
 }
 
 .btn-approve-all:hover {
-  background: #b39369;
+  background: white;
   transform: translateY(-2px);
+  box-shadow: 0 0 30px var(--accent-glow);
 }
 
 .btn-view-all {
-  background: rgba(255,255,255,0.05);
-  color: white;
-  border: 1px solid rgba(255,255,255,0.1);
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
   padding: 16px;
   border-radius: 12px;
   font-weight: 600;
@@ -293,11 +328,13 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  transition: background 0.2s;
+  transition: all 0.2s;
 }
 
 .btn-view-all:hover {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  border-color: white;
 }
 
 .approval-confirm-container {
@@ -333,13 +370,14 @@
 }
 
 .btn-confirm-yes {
-  background: var(--accent-gold, #c4a47c);
-  color: white;
+  background: var(--accent-primary);
+  color: var(--bg-color);
 }
 
 .btn-confirm-yes:hover {
-  background: #b39369;
+  background: white;
   transform: scale(1.02);
+  box-shadow: 0 0 20px var(--accent-glow);
 }
 
 .btn-confirm-no {
@@ -532,7 +570,7 @@
 }
 
 .next-steps-info li {
-  color: #666;
+  color: var(--text-secondary);
   font-size: 0.95rem;
 }
 

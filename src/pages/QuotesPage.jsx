@@ -89,9 +89,9 @@ const QuotesPage = () => {
   };
 
   const phaseGroups = {
-    month1: ['brand-visual', 'competitor-analysis', 'website-audit'],
-    month2: ['seo-foundations', 'website-tracking-audit', 'video-creation', 'seo-listings', 'google-bing-listing', 'social-profiles'],
-    ongoing: ['social-media-management', 'google-ads', 'linkedin-ads', 'meta-ads', 'social-landing-page', 'mailer-funnel', 'whatsapp-automation', 'seo-blog-strategy']
+    month1: ['brand-visual', 'competitor-analysis', 'website-audit', 'seo-foundations'],
+    month2: ['website-tracking-audit', 'video-creation', 'seo-listings', 'google-bing-listing', 'social-profiles', 'social-media-calendar'],
+    ongoing: ['social-media-management']
   };
 
   const totals = useMemo(() => {
@@ -164,10 +164,22 @@ const QuotesPage = () => {
                 {pricingSections.map((section, index) => {
                   const id = section.id || section.data.title || section.data.eyebrow;
                   const isSelected = selectedIds.has(id);
-                  const linkedSocial = isLinkedSocial(id);
-                  
+                  const isFirstPhase2 = id === 'website-tracking-audit';
+                  const isFirstPhase1 = index === 0;
+
                   return (
-                    <tr key={id} className={isSelected ? '' : 'deselected'}>
+                    <React.Fragment key={id}>
+                      {isFirstPhase1 && (
+                        <tr className="phase-header-row">
+                          <td colSpan="4">Phase 1: Foundations</td>
+                        </tr>
+                      )}
+                      {isFirstPhase2 && (
+                        <tr className="phase-header-row">
+                          <td colSpan="4">Phase 2: Expansion</td>
+                        </tr>
+                      )}
+                      <tr className={isSelected ? '' : 'deselected'}>
                       <td>
                         <label className="custom-checkbox">
                           <input 
@@ -196,7 +208,8 @@ const QuotesPage = () => {
                           View Details
                         </a>
                       </td>
-                    </tr>
+                      </tr>
+                    </React.Fragment>
                   );
                 })}
               </tbody>
@@ -221,25 +234,11 @@ const QuotesPage = () => {
                   {totals.breakdown.month1.total > 0 && (
                     <div className="summary-phase-month">
                       <div className="phase-month-header">
-                        <span>Month 1 – Brand & Foundation</span>
+                        <span>Month 1 Investment</span>
                         <span className="amount">{formatCurrency(totals.breakdown.month1.total)}</span>
                       </div>
                       <ul className="phase-item-list">
                         {totals.breakdown.month1.items.map(item => <li key={item}>{item}</li>)}
-                      </ul>
-                    </div>
-                  )}
-
-                  <div className="summary-divider"></div>
-
-                  {totals.breakdown.month2.total > 0 && (
-                    <div className="summary-phase-month">
-                      <div className="phase-month-header">
-                        <span>Month 2 – Website & Platform</span>
-                        <span className="amount">{formatCurrency(totals.breakdown.month2.total)}</span>
-                      </div>
-                      <ul className="phase-item-list">
-                        {totals.breakdown.month2.items.map(item => <li key={item}>{item}</li>)}
                       </ul>
                     </div>
                   )}
@@ -249,12 +248,24 @@ const QuotesPage = () => {
 
                 {/* Phase 2 */}
                 <div className="summary-phase">
+                  <span className="phase-label">PHASE 2: EXPANSION</span>
                   
+                  {totals.breakdown.month2.total > 0 && (
+                    <div className="summary-phase-month">
+                      <div className="phase-month-header">
+                        <span>Setup Investment</span>
+                        <span className="amount">{formatCurrency(totals.breakdown.month2.total)}</span>
+                      </div>
+                      <ul className="phase-item-list">
+                        {totals.breakdown.month2.items.map(item => <li key={item}>{item}</li>)}
+                      </ul>
+                    </div>
+                  )}
                   
                   {totals.breakdown.ongoing.total > 0 && (
                     <div className="summary-phase-month">
                       <div className="phase-month-header">
-                        <span>Month 3 & Ongoing</span>
+                        <span>Social Media Management</span>
                         <span className="amount">{formatCurrency(totals.breakdown.ongoing.total)} /mo</span>
                       </div>
                       <ul className="phase-item-list">

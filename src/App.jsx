@@ -62,8 +62,8 @@ function App({ hideEditButton }) {
     { name: 'Introduction', href: '#intro' },
     { name: 'Phase 1', href: '#phase1-header' },
     { name: 'Phase 2', href: '#phase2-header' },
-    { name: 'Phase 3', href: '#phase3-header' },
-    { name: 'Phase 4', href: '#phase4-header' }
+    { name: 'Optional', href: '#optional' },
+    { name: 'About', href: '#about' }
   ]
 
   return (
