@@ -68,9 +68,14 @@ const ClientLogos = ({ data }) => {
   const handleMouseMove = (e) => {
     if (!isDown.current) return;
     e.preventDefault();
-    hasDragged.current = true;
+    
     const x = e.pageX - sliderRef.current.offsetLeft;
     const walk = (x - startX.current) * 1.5; // Drag speed multiplier
+    
+    if (Math.abs(walk) > 5) {
+      hasDragged.current = true;
+    }
+    
     sliderRef.current.scrollLeft = scrollLeftPos.current - walk;
     
     // Bounds check for infinite dragging wrap
