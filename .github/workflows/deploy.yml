@@ -16,7 +16,7 @@ jobs:
     - name: ⚙️ Setup Node
       uses: actions/setup-node@v4
       with:
-        node-version: '20'
+        node-version: '22'
 
     - name: 📦 Install dependencies
       run: npm install
@@ -31,6 +31,6 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./dist/
-        server-dir: ./public_html/
-        # Optional: set to true to delete files on the server that are not in the local dist folder
-        delete-removed: true
+        server-dir: ./vanillahub.bigondigital.online/
+        # Use state-name to track sync efficiently
+        state-name: .ftp-deploy-sync-state.json
