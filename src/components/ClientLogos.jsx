@@ -116,7 +116,12 @@ const ClientLogos = ({ data }) => {
                   }}
                 >
                   <div className="logo-tooltip">{client.website.replace(/^https?:\/\//, '').replace(/\/$/, '')}</div>
-                  <img src={client.url} alt={client.name} className="client-logo-img" draggable="false" />
+                  <img 
+                    src={client.url} 
+                    alt={client.name} 
+                    className={`client-logo-img ${client.name === "WorkPods" ? "invert-white" : ""}`} 
+                    draggable="false" 
+                  />
                 </a>
               ))}
             </div>
