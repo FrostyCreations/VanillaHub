@@ -78,7 +78,7 @@
   height: 80px;
   min-width: 160px;
   transition: transform 0.3s ease, filter 0.3s ease;
-  filter: grayscale(100%) opacity(0.5); /* Dimmed and gray initially */
+  filter: grayscale(0%) opacity(0.8); /* Always in color, slightly dimmed initially */
   text-decoration: none;
 }
 

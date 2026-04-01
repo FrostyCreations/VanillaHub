@@ -266,14 +266,14 @@ export const proposalData = {
       data: {
         title: "Trusted By Industry Leaders",
         logos: [
-          { name: "Client Partner 1", url: "/Logos-1.webp", website: "#" },
-          { name: "Client Partner 2", url: "/Logos-2.webp", website: "#" },
-          { name: "Client Partner 3", url: "/Logos-3.webp", website: "#" },
-          { name: "Client Partner 4", url: "/Logos-4.webp", website: "#" },
-          { name: "Client Partner 5", url: "/Logos-5.webp", website: "#" },
-          { name: "Client Partner 6", url: "/Logos-6.webp", website: "#" },
-          { name: "Client Partner 7", url: "/Logos-7.webp", website: "#" },
-          { name: "Client Partner 8", url: "/Logos-8.webp", website: "#" }
+          { name: "Cashbox Global", url: "/Logos-1.webp", website: "https://www.cashbox.global" },
+          { name: "WorkPods", url: "/Logos-2.webp", website: "https://workpods.co.za" },
+          { name: "Ferris Group", url: "/Logos-3.webp", website: "https://ferriscars.com" },
+          { name: "WeFin Car Rentals", url: "/Logos-4.webp", website: "https://wefincarrentals.co.za" },
+          { name: "Century 21 Wildlife Properties", url: "/Logos-5.webp", website: "https://www.century21wildlife.co.za" },
+          { name: "With Crypto", url: "/Logos-6.webp", website: "https://withcrypto.com" },
+          { name: "Supercar Rhino Run", url: "/Logos-7.webp", website: "https://rhinorun.co.za" },
+          { name: "Piezo", url: "/Logos-8.webp", website: "https://www.piezo-sa.co.za" }
         ]
       }
     },

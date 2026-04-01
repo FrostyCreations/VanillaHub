@@ -115,7 +115,7 @@ const ClientLogos = ({ data }) => {
                     if (hasDragged.current) e.preventDefault();
                   }}
                 >
-                  <div className="logo-tooltip">{client.website}</div>
+                  <div className="logo-tooltip">{client.website.replace(/^https?:\/\//, '').replace(/\/$/, '')}</div>
                   <img src={client.url} alt={client.name} className="client-logo-img" draggable="false" />
                 </a>
               ))}
