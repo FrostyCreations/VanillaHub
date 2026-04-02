@@ -88,7 +88,7 @@ const Hero = ({ data }) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="hero-title">{data.title}</h1>
+              <h1 className="hero-title" dangerouslySetInnerHTML={{ __html: data.title }} />
             </motion.div>
           </div>
 
@@ -130,7 +130,7 @@ const Hero = ({ data }) => {
           <p className="hero-quote">
             "Business should not be complicated. The right systems make it simple, efficient and built to grow."
           </p>
-          <span className="quote-author">— VanillaHub AI</span>
+          <span className="quote-author">— VanillaHub</span>
         </motion.div>
       </div>
     </section>
