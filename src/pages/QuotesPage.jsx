@@ -90,7 +90,8 @@ const QuotesPage = () => {
 
   const phaseGroups = {
     month1: ['brand-visual', 'competitor-analysis', 'website-audit', 'seo-foundations'],
-    month2: ['website-tracking-audit', 'video-creation', 'seo-listings', 'google-bing-listing', 'social-profiles', 'social-media-calendar'],
+    month2: ['website-tracking-audit', 'video-creation', 'seo-listings'],
+    month3: ['google-bing-listing', 'social-profiles', 'social-media-calendar'],
     ongoing: ['social-media-management']
   };
 
@@ -101,6 +102,7 @@ const QuotesPage = () => {
     const breakdown = {
       month1: { total: 0, items: [] },
       month2: { total: 0, items: [] },
+      month3: { total: 0, items: [] },
       ongoing: { total: 0, items: [] }
     };
 
@@ -125,6 +127,9 @@ const QuotesPage = () => {
       } else if (phaseGroups.month2.includes(id)) {
         breakdown.month2.total += priceVal;
         breakdown.month2.items.push(label);
+      } else if (phaseGroups.month3.includes(id)) {
+        breakdown.month3.total += priceVal;
+        breakdown.month3.items.push(label);
       } else if (phaseGroups.ongoing.includes(id)) {
         breakdown.ongoing.total += priceVal;
         breakdown.ongoing.items.push(label);
@@ -165,6 +170,7 @@ const QuotesPage = () => {
                   const id = section.id || section.data.title || section.data.eyebrow;
                   const isSelected = selectedIds.has(id);
                   const isFirstPhase2 = id === 'website-tracking-audit';
+                  const isFirstPhase3 = id === 'google-bing-listing';
                   const isFirstPhase1 = index === 0;
 
                   return (
@@ -177,6 +183,11 @@ const QuotesPage = () => {
                       {isFirstPhase2 && (
                         <tr className="phase-header-row">
                           <td colSpan="4">Phase 2: Expansion</td>
+                        </tr>
+                      )}
+                      {isFirstPhase3 && (
+                        <tr className="phase-header-row print-page-break">
+                          <td colSpan="4">Social Expansion</td>
                         </tr>
                       )}
                       <tr className={isSelected ? '' : 'deselected'}>
@@ -246,14 +257,13 @@ const QuotesPage = () => {
 
                 <div className="summary-divider"></div>
 
-                {/* Phase 2 */}
                 <div className="summary-phase">
                   <span className="phase-label">PHASE 2: EXPANSION</span>
                   
                   {totals.breakdown.month2.total > 0 && (
                     <div className="summary-phase-month">
                       <div className="phase-month-header">
-                        <span>Setup Investment</span>
+                        <span>Month 2 Investment</span>
                         <span className="amount">{formatCurrency(totals.breakdown.month2.total)}</span>
                       </div>
                       <ul className="phase-item-list">
@@ -261,16 +271,34 @@ const QuotesPage = () => {
                       </ul>
                     </div>
                   )}
+                </div>
+
+                <div className="summary-divider print-page-break-container"></div>
+
+                {/* Phase 3 */}
+                <div className="summary-phase">
+                  <span className="phase-label">SOCIAL EXPANSION</span>
                   
-                  {totals.breakdown.ongoing.total > 0 && (
+                  {totals.breakdown.month3.total > 0 && (
                     <div className="summary-phase-month">
                       <div className="phase-month-header">
-                        <span>Social Media Management</span>
+                        <span>Month 3 Investment</span>
+                        <span className="amount">{formatCurrency(totals.breakdown.month3.total)}</span>
+                      </div>
+                      <ul className="phase-item-list">
+                        {totals.breakdown.month3.items.map(item => <li key={item}>{item}</li>)}
+                      </ul>
+                    </div>
+                  )}
+                  
+                  {totals.breakdown.ongoing.total > 0 && (
+                    <div className="summary-phase-month" style={{ marginTop: '1rem' }}>
+                      <div className="phase-month-header">
+                        <span>Monthly Social Media Management</span>
                         <span className="amount">{formatCurrency(totals.breakdown.ongoing.total)} /mo</span>
                       </div>
                       <ul className="phase-item-list">
                         {totals.breakdown.ongoing.items.map(item => <li key={item}>{item}</li>)}
-                        <li className="ad-spend-item">+ R 6,000 recommended ad spend</li>
                       </ul>
                       <p className="phase-terms">Subject to initial 3-month agreement, thereafter month-to-month.</p>
                     </div>

@@ -595,3 +595,15 @@
     display: none;
   }
 }
+
+/* Print/Export Page Breaks */
+@media print {
+  .print-page-break {
+    page-break-before: always;
+    break-before: page;
+  }
+  .print-page-break-container {
+    page-break-before: always;
+    break-before: page;
+  }
+}
